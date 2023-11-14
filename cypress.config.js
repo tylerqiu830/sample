@@ -7,3 +7,8 @@ module.exports = defineConfig({
     },
   },
 });
+
+module.exports = {
+  projectId: "mdfddi",
+  // ...rest of the Cypress project config
+}
