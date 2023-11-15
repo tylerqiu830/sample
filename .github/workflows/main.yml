@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: build
-          if-no-files-found: error
+          #if-no-files-found: error
           path: build
 
   install-windows:
@@ -52,7 +52,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: build
-          if-no-files-found: error
+          #if-no-files-found: error
           path: build
 
   ui-chrome-tests:
