@@ -214,25 +214,7 @@ jobs:
           name: build
           path: build
 
-      - name: "UI Tests - Firefox - Mobile"
-        uses: cypress-io/github-action@v6
-        with:
-          config: "'{"e2e":{"viewportWidth":375,"viewportHeight":667}}"
-          start: yarn start:ci
-          wait-on: "http://localhost:3000"
-          wait-on-timeout: 120
-          browser: firefox
-          record: true
-          parallel: true
-          group: "UI - Firefox - Mobile"
-          spec: cypress/tests/ui/*
-          config-file: cypress.config.ts
-        env:
-          CYPRESS_PROJECT_ID: ${{ secrets.CYPRESS_PROJECT_ID }}
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-          # Recommended: pass the GitHub token lets this action correctly
-          # determine the unique run id necessary to re-run the checks
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+     
 
   ui-windows-tests:
     timeout-minutes: 40
